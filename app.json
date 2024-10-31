@@ -1,27 +1,20 @@
 {
   "expo": {
-    "name": "DoneWithIt",
-    "slug": "DoneWithIt",
-    "version": "1.0.0",
-    "orientation": "portrait",
-    "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
-    "splash": {
-      "image": "./assets/splash.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
-    },
-    "ios": {
-      "supportsTablet": true
-    },
-    "android": {
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+    "extra": {
+      "eas": {
+        "projectId": "b5656a62-2af7-4a7e-b522-cf6a392444f8"
       }
     },
-    "web": {
-      "favicon": "./assets/favicon.png"
+    "updates": {
+      "url": "https://u.expo.dev/b5656a62-2af7-4a7e-b522-cf6a392444f8"
+    },
+    "android": {
+      "runtimeVersion": "1.0.0"
+    },
+    "ios": {
+      "runtimeVersion": {
+        "policy": "appVersion"
+      }
     }
   }
 }
