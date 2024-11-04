@@ -10,7 +10,7 @@ export default function First() {
   return (
     <View style={styles.container}>
       <Image
-        source={{ uri: 'https://example.com/path-to-your-image.jpg' }}
+        source={require('./assets/Rectangle 2.png')}
         style={styles.backgroundImage}
       />
       <LinearGradient

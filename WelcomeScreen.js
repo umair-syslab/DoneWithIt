@@ -7,11 +7,11 @@ import { useNavigation } from '@react-navigation/native';
 
 const Logo = () => (
   <View style={styles.logoContainer}>
-    <Image
-      source={require('./assets/VSARA-icon 2.png')}
+   <Image
+      source={require('./assets/VSARA.png')} // Replace 'logo.png' with your actual logo file name
       style={styles.logoImage}
     />
-    <Text style={styles.logoText}>SARA</Text>
+    {/* <Text style={styles.logoText}>SARA</Text> */}
   </View>
 );
 
@@ -23,7 +23,7 @@ export default function WelcomeScreen() {
       <Logo />
       <View style={styles.content}>
         <Image
-          source={require('./assets/icon.png')}
+          source={require('./assets/Layer_1.png')}
           style={styles.illustration}
         />
         <View style={styles.dotContainer}>
@@ -81,8 +81,8 @@ const styles = StyleSheet.create({
     marginBottom: 40,
   },
   logoImage: {
-    width: 30,
-    height: 30,
+    width: 120,
+    height: 120,
     resizeMode: 'contain',
     marginRight: 5,
   },
@@ -137,7 +137,7 @@ const styles = StyleSheet.create({
   },
   skipButton: {
     padding: 15,
-    borderRadius: 8,
+    borderRadius: 20,
     backgroundColor: '#F3F4F6',
     flex: 1,
     marginRight: 10,
@@ -149,7 +149,7 @@ const styles = StyleSheet.create({
   },
   getStartedButton: {
     padding: 15,
-    borderRadius: 8,
+    borderRadius: 20,
     backgroundColor: '#0EA5E9',
     flex: 1,
     marginLeft: 10,

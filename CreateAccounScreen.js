@@ -164,7 +164,7 @@ const styles = StyleSheet.create({
   },
   nextButton: {
     backgroundColor: '#0EA5E9',
-    borderRadius: 8,
+    borderRadius: 20,
     padding: 15,
     alignItems: 'center',
   },

@@ -50,12 +50,7 @@ export default function CheckoutScreen() {
         <TouchableOpacity
           style={styles.deliveryOption}
           onPress={() => setDeliveryMethod('pickup')}
-        >
-          {/* <View style={[styles.radio, deliveryMethod === 'pickup' && styles.radioSelected]} />
-          <View style={styles.deliveryOptionContent}>
-            <Text style={styles.deliveryOptionTitle}>Take Away Self Pickup</Text>
-            <Text style={styles.deliveryOptionSubtitle}>Device is ready to pickup</Text>
-          </View> */}
+        >        
           <View style={[styles.radio, deliveryMethod === 'pickup' && styles.radioSelected]} />
           <View style={styles.deliveryOptionContent}>
             <Ionicons name="car-outline" size={24} color="#000" style={styles.deliveryIcon} />

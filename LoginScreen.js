@@ -6,10 +6,10 @@ import { useNavigation } from '@react-navigation/native';
 const Logo = () => (
   <View style={styles.logoContainer}>
     <Image
-      source={require('./assets/VSARA-icon 2.png')} // Replace 'logo.png' with your actual logo file name
+      source={require('./assets/VSARA.png')} // Replace 'logo.png' with your actual logo file name
       style={styles.logoImage}
     />
-    <Text style={styles.logoText}>SARA</Text>
+    {/* <Text style={styles.logoText}>SARA</Text> */}
   </View>
 );
 
@@ -78,15 +78,6 @@ export default function LoginScreen() {
           Don't have an account? <Text style={styles.signUpLink}>Sign Up</Text>
         </Text>
       </TouchableOpacity>
-      
-      {/* Dummy button to navigate to CreateAccountScreen */}
-        {/* Custom small "Next" button */}
-        {/* <TouchableOpacity
-        style={styles.nextButton}
-        onPress={() => navigation.navigate('CreateAccountScreen')}
-      >
-        <Text style={styles.nextButtonText}>Next</Text>
-      </TouchableOpacity> */}
     </SafeAreaView>
   );
 }
@@ -105,8 +96,8 @@ const styles = StyleSheet.create({
     marginBottom: 40,
   },
   logoImage: {
-    width: 30,
-    height: 30,
+    width: 120,
+    height: 120,
     marginRight: 5,
     resizeMode: 'contain',
   },
@@ -170,7 +161,7 @@ const styles = StyleSheet.create({
   },
   signInButton: {
     backgroundColor: '#0EA5E9',
-    borderRadius: 8,
+    borderRadius: 20,
     padding: 15,
     alignItems: 'center',
   },

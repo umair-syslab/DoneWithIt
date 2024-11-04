@@ -8,13 +8,22 @@ import WelcomeScreen from './WelcomeScreen';
 import CreateAccountScreen from './CreateAccounScreen';
 import LoginScreen from './LoginScreen';
 import CheckoutScreen from './CheckoutScreen';
+import ForgotPasswordScreen from './ForgotPasswordScreen';
+import VerifyAccountScreen from './VerifyAccountScreen';
+import CreateNewPasswordScreen from './CreateNewPasswordScreen';
+import HomeScreen from './HomeScreen';
+import SelectProfileScreen from './SelectProfileScreen'
+import NotificationsScreen from './NotificationsScreen'
+import FindDoctorScreen from './FindDoctorScreen';
+import StoreScreen from './StoreScreen'
+import ActionCards from './ActionCards'
 
 const Stack = createStackNavigator();
 
 const App = () => {
    return (
       <NavigationContainer>
-         <Stack.Navigator initialRouteName="First">
+         <Stack.Navigator initialRouteName="ActionCards">
          <Stack.Screen
                name="CheckoutScreen"
                component={CheckoutScreen}
@@ -40,7 +49,51 @@ const App = () => {
                component={First}
                options={{ headerShown: false }}
             />
-          
+             <Stack.Screen
+               name="ForgotPasswordScreen"
+               component={ForgotPasswordScreen}
+               options={{ headerShown: false }}
+            />
+              <Stack.Screen
+               name="VerifyAccountScreen"
+               component={VerifyAccountScreen}
+               options={{ headerShown: false }}
+            />
+              <Stack.Screen
+               name="CreateNewPasswordScreen"
+               component={CreateNewPasswordScreen}
+               options={{ headerShown: false }}
+            />
+            <Stack.Screen
+               name="HomeScreen"
+               component={HomeScreen}
+               options={{ headerShown: false }}
+            />
+             <Stack.Screen
+               name="SelectProfileScreen"
+               component={SelectProfileScreen}
+               options={{ headerShown: false }}
+            />
+                <Stack.Screen
+               name="NotificationsScreen"
+               component={NotificationsScreen}
+               options={{ headerShown: false }}
+            />
+               <Stack.Screen
+               name="FindDoctorScreen"
+               component={FindDoctorScreen}
+               options={{ headerShown: false }}
+            />
+               <Stack.Screen
+               name="StoreScreen"
+               component={StoreScreen}
+               options={{ headerShown: false }}
+            />
+              <Stack.Screen
+               name="ActionCards"
+               component={ActionCards}
+               options={{ headerShown: false }}
+            />
          </Stack.Navigator>
       </NavigationContainer>
    );
