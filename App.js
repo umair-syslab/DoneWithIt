@@ -3,6 +3,10 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import FrontScreen from './FrontScreen';
 import RegisterScreen from './RegisterScreen';
+
+
+
+// Screens 
 import First from './screens/First';
 import WelcomeScreen from './screens/WelcomeScreen';
 import CreateAccountScreen from './screens/CreateAccounScreen';
@@ -20,13 +24,16 @@ import ActionCards from './screens/ActionCards'
 import ProductDetailScreen from './screens/ProductDetailScreen';
 import AddNewMemberScreen from './screens/AddNewMemberScreen'
 import AppointmentsScreen from './screens/AppointmentScreen';
+import AboutScreen from './screens/AboutScreen';
+
+
 
 const Stack = createStackNavigator();
 
 const App = () => {
    return (
       <NavigationContainer>
-         <Stack.Navigator initialRouteName="LoginScreen">
+         <Stack.Navigator initialRouteName="AboutScreen">
          <Stack.Screen
                name="CheckoutScreen"
                component={CheckoutScreen}
@@ -110,6 +117,11 @@ const App = () => {
               <Stack.Screen
                name="AppointmentsScreen"
                component={AppointmentsScreen}
+               options={{ headerShown: false }}
+            />
+                <Stack.Screen
+               name="AboutScreen"
+               component={AboutScreen}
                options={{ headerShown: false }}
             />
          </Stack.Navigator>
