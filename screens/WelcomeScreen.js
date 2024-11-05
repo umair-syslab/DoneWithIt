@@ -8,10 +8,9 @@ import { useNavigation } from '@react-navigation/native';
 const Logo = () => (
   <View style={styles.logoContainer}>
    <Image
-      source={require('./assets/VSARA.png')} // Replace 'logo.png' with your actual logo file name
+      source={require('../assets/VSARA.png')} // Replace 'logo.png' with your actual logo file name
       style={styles.logoImage}
     />
-    {/* <Text style={styles.logoText}>SARA</Text> */}
   </View>
 );
 
@@ -23,7 +22,7 @@ export default function WelcomeScreen() {
       <Logo />
       <View style={styles.content}>
         <Image
-          source={require('./assets/Layer_1.png')}
+          source={require('../assets/Layer_1.png')}
           style={styles.illustration}
         />
         <View style={styles.dotContainer}>
@@ -56,14 +55,7 @@ export default function WelcomeScreen() {
           Already have an account? <Text style={styles.signInLink}>Sign in</Text>
         </Text>
       </TouchableOpacity>
-      {/* Dummy button to navigate to CreateAccountScreen */}
-        {/* Custom small "Next" button */}
-        {/* <TouchableOpacity
-        style={styles.nextButton}
-        onPress={() => navigation.navigate('CreateAccountScreen')}
-      >
-        <Text style={styles.nextButtonText}>Next</Text>
-      </TouchableOpacity> */}
+   
     </SafeAreaView>
   );
 }

@@ -6,10 +6,9 @@ import { useNavigation } from '@react-navigation/native';
 const Logo = () => (
   <View style={styles.logoContainer}>
     <Image
-      source={require('./assets/VSARA.png')} // Replace 'logo.png' with your actual logo file name
+      source={require('../assets/VSARA.png')} // Replace 'logo.png' with your actual logo file name
       style={styles.logoImage}
     />
-    {/* <Text style={styles.logoText}>SARA</Text> */}
   </View>
 );
 

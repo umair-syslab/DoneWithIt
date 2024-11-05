@@ -45,9 +45,7 @@ export default function HomeScreen() {
         <View style={styles.header}>
           <View style={styles.userInfo}>
             <Image 
-            source={require('./assets/Image Placeholder.png')}
-
-            //   source={{ uri: 'https://example.com/profile-pic.jpg' }} 
+            source={require('../assets/Image Placeholder.png')}
               style={styles.profilePic} 
             />
             <View>
@@ -80,7 +78,7 @@ export default function HomeScreen() {
             </View>
           
             <Image 
-  source={require('./assets/asian-doctor-man-portrait-standing-with-smile-and-2022-10-19-04-10-25-utc 1.png')}
+  source={require('../assets/asian-doctor-man-portrait-standing-with-smile-and-2022-10-19-04-10-25-utc 1.png')}
   style={styles.bannerImage} 
   resizeMode="contain"  // Options: "cover", "contain", "center"
  />
@@ -88,22 +86,22 @@ export default function HomeScreen() {
         </View>
         <View style={styles.servicesContainer}>
           <ServiceCard
-            imageSource={require('./assets/Frame.png')}
+            imageSource={require('../assets/Frame.png')}
             title="Doctor"
             subtitle="Home Visit"
           />
           <ServiceCard
-            imageSource={require('./assets/Frame (1).png')}            
+            imageSource={require('../assets/Frame (1).png')}            
             title="Nurse"
             subtitle="Home visit"
           />
           <ServiceCard
-            imageSource={require('./assets/Frame (2).png')} 
+            imageSource={require('../assets/Frame (2).png')} 
             title="Pharmacies"
             subtitle="Deliver & Pickup"
           />
           <ServiceCard
-            imageSource={require('./assets/Group.png')} 
+            imageSource={require('../assets/Group.png')} 
             title="Store"
             subtitle="IOT Devices"
           />
@@ -119,13 +117,13 @@ export default function HomeScreen() {
           </View>
           <ScrollView horizontal showsHorizontalScrollIndicator={false}>
             <DeviceCard
-              image={require('./assets/Doctor 5.png')}
+              image={require('../assets/Doctor 5.png')}
               title="Oximeter"
               subtitle="BP Monitor"
               rating={4.5}
             />
             <DeviceCard
-              image={require('./assets/Image.png')}
+              image={require('../assets/Image.png')}
               title="Blood Pressure"
               subtitle="BP Monitor"
               rating={4.5}

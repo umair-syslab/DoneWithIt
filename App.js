@@ -3,30 +3,30 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import FrontScreen from './FrontScreen';
 import RegisterScreen from './RegisterScreen';
-import First from './First';
-import WelcomeScreen from './WelcomeScreen';
-import CreateAccountScreen from './CreateAccounScreen';
-import LoginScreen from './LoginScreen';
-import CheckoutScreen from './CheckoutScreen';
-import ForgotPasswordScreen from './ForgotPasswordScreen';
-import VerifyAccountScreen from './VerifyAccountScreen';
-import CreateNewPasswordScreen from './CreateNewPasswordScreen';
-import HomeScreen from './HomeScreen';
-import SelectProfileScreen from './SelectProfileScreen'
-import NotificationsScreen from './NotificationsScreen'
-import FindDoctorScreen from './FindDoctorScreen';
-import StoreScreen from './StoreScreen'
-import ActionCards from './ActionCards'
-import ProductDetailScreen from './ProductDetailScreen';
-import AddNewMemberScreen from './AddNewMemberScreen'
-import AppointmentsScreen from './AppointmentScreen';
+import First from './screens/First';
+import WelcomeScreen from './screens/WelcomeScreen';
+import CreateAccountScreen from './screens/CreateAccounScreen';
+import LoginScreen from './screens/LoginScreen';
+import CheckoutScreen from './screens/CheckoutScreen';
+import ForgotPasswordScreen from './screens/ForgotPasswordScreen';
+import VerifyAccountScreen from './screens/VerifyAccountScreen';
+import CreateNewPasswordScreen from './screens/CreateNewPasswordScreen';
+import HomeScreen from './screens/HomeScreen';
+import SelectProfileScreen from './screens/SelectProfileScreen'
+import NotificationsScreen from './screens/NotificationsScreen'
+import FindDoctorScreen from './screens/FindDoctorScreen';
+import StoreScreen from './screens/StoreScreen'
+import ActionCards from './screens/ActionCards'
+import ProductDetailScreen from './screens/ProductDetailScreen';
+import AddNewMemberScreen from './screens/AddNewMemberScreen'
+import AppointmentsScreen from './screens/AppointmentScreen';
 
 const Stack = createStackNavigator();
 
 const App = () => {
    return (
       <NavigationContainer>
-         <Stack.Navigator initialRouteName="AppointmentsScreen">
+         <Stack.Navigator initialRouteName="LoginScreen">
          <Stack.Screen
                name="CheckoutScreen"
                component={CheckoutScreen}

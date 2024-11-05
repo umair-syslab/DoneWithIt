@@ -10,7 +10,7 @@ export default function First() {
   return (
     <View style={styles.container}>
       <Image
-        source={require('./assets/Rectangle 2.png')}
+        source={require('../assets/Rectangle 2.png')}
         style={styles.backgroundImage}
       />
       <LinearGradient
@@ -19,7 +19,7 @@ export default function First() {
       >
         <View style={styles.content}>
           <Image
-            source={require('./assets/VSARA-icon 2.png')}
+            source={require('../assets/VSARA-icon 2.png')}
             style={styles.logo}
           />
           <Text style={styles.title}>SARA</Text>
