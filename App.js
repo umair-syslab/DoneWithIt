@@ -17,13 +17,14 @@ import NotificationsScreen from './NotificationsScreen'
 import FindDoctorScreen from './FindDoctorScreen';
 import StoreScreen from './StoreScreen'
 import ActionCards from './ActionCards'
+import ProductDetailScreen from './ProductDetailScreen';
 
 const Stack = createStackNavigator();
 
 const App = () => {
    return (
       <NavigationContainer>
-         <Stack.Navigator initialRouteName="ActionCards">
+         <Stack.Navigator initialRouteName="ProductDetailScreen">
          <Stack.Screen
                name="CheckoutScreen"
                component={CheckoutScreen}
@@ -92,6 +93,11 @@ const App = () => {
               <Stack.Screen
                name="ActionCards"
                component={ActionCards}
+               options={{ headerShown: false }}
+            />
+              <Stack.Screen
+               name="ProductDetailScreen"
+               component={ProductDetailScreen}
                options={{ headerShown: false }}
             />
          </Stack.Navigator>
