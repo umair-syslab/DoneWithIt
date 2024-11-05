@@ -19,13 +19,14 @@ import StoreScreen from './StoreScreen'
 import ActionCards from './ActionCards'
 import ProductDetailScreen from './ProductDetailScreen';
 import AddNewMemberScreen from './AddNewMemberScreen'
+import AppointmentsScreen from './AppointmentScreen';
 
 const Stack = createStackNavigator();
 
 const App = () => {
    return (
       <NavigationContainer>
-         <Stack.Navigator initialRouteName="AddNewMemberScreen">
+         <Stack.Navigator initialRouteName="AppointmentsScreen">
          <Stack.Screen
                name="CheckoutScreen"
                component={CheckoutScreen}
@@ -104,6 +105,11 @@ const App = () => {
                <Stack.Screen
                name="AddNewMemberScreen"
                component={AddNewMemberScreen}
+               options={{ headerShown: false }}
+            />
+              <Stack.Screen
+               name="AppointmentsScreen"
+               component={AppointmentsScreen}
                options={{ headerShown: false }}
             />
          </Stack.Navigator>
