@@ -1,4 +1,5 @@
-import React from 'react';
+// import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { 
   View, 
   Text, 
@@ -7,9 +8,11 @@ import {
   StyleSheet, 
   SafeAreaView,
   ScrollView,
-  Dimensions
+  Dimensions,
+  Button
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
+import MedicineReminderModal from '../Modals/MedicineReminderModal';
 
 const ServiceCard = ({ imageSource, title, subtitle }) => (
     <TouchableOpacity style={styles.serviceCard}>
@@ -38,8 +41,38 @@ const DeviceCard = ({ image, title, subtitle, rating }) => (
   );
 
 export default function HomeScreen() {
+  const [isModalVisible, setModalVisible] = useState(false);
+
+  // Optional: Show modal when screen loads
+  useEffect(() => {
+    setModalVisible(true); // Opens the modal when the home screen loads
+  }, []);
+
+  const handleCloseModal = () => {
+    setModalVisible(false);
+  };
+
+  const handleSkip = () => {
+    // Add skip action logic here
+    setModalVisible(false);
+  };
+
+  const handleTake = () => {
+    // Add take action logic here
+    setModalVisible(false);
+  };
   return (
     <SafeAreaView style={styles.container}>
+      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+        {/* <Button title="Show Reminder Modal" onPress={() => setModalVisible(true)} /> */}
+      
+        <MedicineReminderModal
+          visible={isModalVisible}
+          onClose={handleCloseModal}
+          onSkip={handleSkip}
+          onTake={handleTake}
+        />
+      </View>
       <ScrollView>
         {/* Header */}
         <View style={styles.header}>
