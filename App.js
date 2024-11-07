@@ -25,20 +25,28 @@ import ProductDetailScreen from './screens/ProductDetailScreen';
 import AddNewMemberScreen from './screens/AddNewMemberScreen'
 import AppointmentsScreen from './screens/AppointmentScreen';
 import AboutScreen from './screens/AboutScreen';
+
+
+// Models
 import MedicineReminderModal from './Modals/MedicineReminderModal';
+import SignupSuccessModal from './Modals/SignupSuccessModal';
+import CompleteProfileModal from './Modals/CompleteProfileModal';
+
 
 // screen doctor
-
 import UploadCertificatesScreen from './screensD/UploadCertificateScreen';
 import MyProfileScreen from './screensD/MyProfileScreen';
 import DocumentsScreen from './screensD/DocumentScreen';
+import CreateAccountDoctor from './screensD/CreateAccountDoctor';
+import CreateAccountStep2Screen from './screensD/CreateAccountStep2Screen';
+import HomeScreenDoctor from './screensD/HomeScreenDoctor';
 
 const Stack = createStackNavigator();
 
 const App = () => {
    return (
       <NavigationContainer>
-         <Stack.Navigator initialRouteName="UploadCertificatesScreen">
+         <Stack.Navigator initialRouteName="CreateAccountDoctor">
          <Stack.Screen
                name="CheckoutScreen"
                component={CheckoutScreen}
@@ -147,6 +155,31 @@ const App = () => {
                    <Stack.Screen
                name="DocumentsScreen"
                component={DocumentsScreen}
+               options={{ headerShown: false }}
+            />
+                  <Stack.Screen
+               name="CreateAccountDoctor"
+               component={CreateAccountDoctor}
+               options={{ headerShown: false }}
+            />
+                  <Stack.Screen
+               name="CreateAccountStep2Screen"
+               component={CreateAccountStep2Screen}
+               options={{ headerShown: false }}
+            />
+                 <Stack.Screen
+               name="SignupSuccessModal"
+               component={SignupSuccessModal}
+               options={{ headerShown: false }}
+            />
+                  <Stack.Screen
+               name="CompleteProfileModal"
+               component={CompleteProfileModal}
+               options={{ headerShown: false }}
+            />
+                   <Stack.Screen
+               name="HomeScreenDoctor"
+               component={HomeScreenDoctor}
                options={{ headerShown: false }}
             />
          </Stack.Navigator>

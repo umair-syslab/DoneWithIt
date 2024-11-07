@@ -17,7 +17,7 @@ export default function MyProfileScreen() {
       id: '1', 
       icon: 'document-text-outline', 
       title: 'Documents',
-      badge: 'Pending'
+      badge: 'Pending',
     },
     { 
       id: '2', 

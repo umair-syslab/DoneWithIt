@@ -1,28 +1,26 @@
-
-import React from 'react';
-import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
-import { useNavigation } from '@react-navigation/native';
-
+import React from "react";
+import { View, Text, StyleSheet, Image, TouchableOpacity } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
+import { useNavigation } from "@react-navigation/native";
 
 const Logo = () => (
   <View style={styles.logoContainer}>
-   <Image
-      source={require('../assets/VSARA.png')} // Replace 'logo.png' with your actual logo file name
+    <Image
+      source={require("../assets/VSARA.png")} // Replace 'logo.png' with your actual logo file name
       style={styles.logoImage}
     />
   </View>
 );
 
 export default function WelcomeScreen() {
-  const navigation = useNavigation();  // Use navigation hook
+  const navigation = useNavigation(); // Use navigation hook
 
   return (
     <SafeAreaView style={styles.container}>
       <Logo />
       <View style={styles.content}>
         <Image
-          source={require('../assets/Layer_1.png')}
+          source={require("../assets/Layer_1.png")}
           style={styles.illustration}
         />
         <View style={styles.dotContainer}>
@@ -49,13 +47,14 @@ export default function WelcomeScreen() {
         </TouchableOpacity>
       </View>
       <TouchableOpacity>
-        <Text style={styles.signInText}
-      onPress={() => navigation.navigate('CreateAccountScreen')}>
-        
-          Already have an account? <Text style={styles.signInLink}>Sign in</Text>
+        <Text
+          style={styles.signInText}
+          onPress={() => navigation.navigate("CreateAccountScreen")}
+        >
+          Already have an account?{" "}
+          <Text style={styles.signInLink}>Sign in</Text>
         </Text>
       </TouchableOpacity>
-   
     </SafeAreaView>
   );
 }
@@ -63,100 +62,100 @@ export default function WelcomeScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'white',
-    alignItems: 'center',
+    backgroundColor: "white",
+    alignItems: "center",
     padding: 20,
   },
   logoContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
+    flexDirection: "row",
+    alignItems: "center",
     marginBottom: 40,
   },
   logoImage: {
     width: 120,
     height: 120,
-    resizeMode: 'contain',
+    resizeMode: "contain",
     marginRight: 5,
   },
   logoText: {
     fontSize: 24,
-    fontWeight: 'bold',
-    color: '#333',
+    fontWeight: "bold",
+    color: "#333",
   },
   content: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
+    alignItems: "center",
+    justifyContent: "center",
   },
   illustration: {
     width: 250,
     height: 250,
-    resizeMode: 'contain',
+    resizeMode: "contain",
   },
   dotContainer: {
-    flexDirection: 'row',
+    flexDirection: "row",
     marginTop: 20,
   },
   dot: {
     width: 8,
     height: 8,
     borderRadius: 4,
-    backgroundColor: '#D1D5DB',
+    backgroundColor: "#D1D5DB",
     marginHorizontal: 4,
   },
   activeDot: {
-    backgroundColor: '#2DD4BF',
+    backgroundColor: "#2DD4BF",
     width: 20,
   },
   title: {
     fontSize: 24,
-    fontWeight: 'bold',
-    textAlign: 'center',
+    fontWeight: "bold",
+    textAlign: "center",
     marginTop: 20,
-    color: '#333',
+    color: "#333",
   },
   subtitle: {
     fontSize: 16,
-    textAlign: 'center',
+    textAlign: "center",
     marginTop: 10,
-    color: '#6B7280',
+    color: "#6B7280",
   },
   buttonContainer: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    width: '100%',
+    flexDirection: "row",
+    justifyContent: "space-between",
+    width: "100%",
     marginTop: 30,
   },
   skipButton: {
     padding: 15,
     borderRadius: 20,
-    backgroundColor: '#F3F4F6',
+    backgroundColor: "#F3F4F6",
     flex: 1,
     marginRight: 10,
   },
   skipButtonText: {
-    color: '#374151',
-    fontWeight: '600',
-    textAlign: 'center',
+    color: "#374151",
+    fontWeight: "600",
+    textAlign: "center",
   },
   getStartedButton: {
     padding: 15,
     borderRadius: 20,
-    backgroundColor: '#0EA5E9',
+    backgroundColor: "#0EA5E9",
     flex: 1,
     marginLeft: 10,
   },
   getStartedButtonText: {
-    color: 'white',
-    fontWeight: '600',
-    textAlign: 'center',
+    color: "white",
+    fontWeight: "600",
+    textAlign: "center",
   },
   signInText: {
     marginTop: 20,
-    color: '#6B7280',
+    color: "#6B7280",
   },
   signInLink: {
-    color: '#0EA5E9',
-    fontWeight: '600',
+    color: "#0EA5E9",
+    fontWeight: "600",
   },
 });
