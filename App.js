@@ -31,12 +31,13 @@ import AboutScreen from './screens/AboutScreen';
 import MedicineReminderModal from './Modals/MedicineReminderModal';
 import SignupSuccessModal from './Modals/SignupSuccessModal';
 import CompleteProfileModal from './Modals/CompleteProfileModal';
+import ProfileNotVerifiedModal from './Modals/ProfileNotVerifiedModal';
 
 
 // screen doctor
 import UploadCertificatesScreen from './screensD/UploadCertificateScreen';
 import MyProfileScreen from './screensD/MyProfileScreen';
-import DocumentsScreen from './screensD/DocumentScreen';
+import DocumentScreen from './screensD/DocumentScreen';
 import CreateAccountDoctor from './screensD/CreateAccountDoctor';
 import CreateAccountStep2Screen from './screensD/CreateAccountStep2Screen';
 import HomeScreenDoctor from './screensD/HomeScreenDoctor';
@@ -153,8 +154,8 @@ const App = () => {
                options={{ headerShown: false }}
             />
                    <Stack.Screen
-               name="DocumentsScreen"
-               component={DocumentsScreen}
+               name="DocumentScreen"
+               component={DocumentScreen}
                options={{ headerShown: false }}
             />
                   <Stack.Screen
@@ -180,6 +181,11 @@ const App = () => {
                    <Stack.Screen
                name="HomeScreenDoctor"
                component={HomeScreenDoctor}
+               options={{ headerShown: false }}
+            />
+                    <Stack.Screen
+               name="ProfileNotVerifiedModal"
+               component={ProfileNotVerifiedModal}
                options={{ headerShown: false }}
             />
          </Stack.Navigator>

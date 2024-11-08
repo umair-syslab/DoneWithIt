@@ -7,12 +7,14 @@ import {
   SafeAreaView,
   ScrollView 
 } from 'react-native';
+import { useNavigation } from '@react-navigation/native'; // Import navigation
 import { Ionicons } from '@expo/vector-icons';
 
 
 export default function DocumentsScreen() {
+  const navigation = useNavigation(); // Initialize navigation
   const documents = [
-    { id: '1', title: 'Medical Certificates', icon: 'ribbon-outline', hasWarning: true },
+    { id: '1', title: 'Medical Certificates', icon: 'ribbon-outline', hasWarning: true, screen: 'UploadCertificatesScreen'  },
     { id: '2', title: 'Professional ID cards', icon: 'card-outline', hasWarning: true },
     { id: '3', title: 'Medical License', icon: 'key-outline', hasWarning: true },
     { id: '4', title: 'Specialization Certificates', icon: 'school-outline', hasWarning: true },
@@ -20,7 +22,13 @@ export default function DocumentsScreen() {
   ];
 
   const DocumentListItem = ({ item }) => (
-    <TouchableOpacity style={styles.documentItem}>
+    // <TouchableOpacity style={styles.documentItem}>
+    <TouchableOpacity style={styles.documentItem}
+    onPress={() => {
+      if (item.screen) {
+        navigation.navigate(item.screen); // Navigate to specified screen
+      }
+    }}>
       <View style={styles.documentItemLeft}>
         <View style={styles.documentIconContainer}>
           <Ionicons name={item.icon} size={24} color="#00000" />

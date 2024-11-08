@@ -72,7 +72,7 @@ export default function LoginScreen() {
       </TouchableOpacity>
       
       <TouchableOpacity style={styles.signUpContainer}
-      onPress={() => navigation.navigate('CreateAccountScreen')}>
+      onPress={() => navigation.navigate('CreateAccountDoctor')}>
         <Text style={styles.signUpText}>
           Don't have an account? <Text style={styles.signUpLink}>Sign Up</Text>
         </Text>
@@ -92,7 +92,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
-    marginBottom: 40,
+    marginBottom: 30,
   },
   logoImage: {
     width: 120,

@@ -9,10 +9,11 @@ import {
   Image
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
-
+import { useNavigation } from '@react-navigation/native';
 
 
 export default function UploadCertificatesScreen() {
+  const navigation = useNavigation();
   const [files, setFiles] = useState([
     { id: '1', name: 'medical_certificate.pdf', status: 'success' },
     { id: '2', name: 'medical_certificate.jpeg', status: 'loading', progress: 75 },
@@ -81,7 +82,7 @@ export default function UploadCertificatesScreen() {
         </View>
       </ScrollView>
 
-      <TouchableOpacity style={styles.continueButton}>
+      <TouchableOpacity style={styles.continueButton}  onPress={() => navigation.navigate('HomeScreenDoctor')}>
         <Text style={styles.continueButtonText}>Continue</Text>
       </TouchableOpacity>
     </SafeAreaView>

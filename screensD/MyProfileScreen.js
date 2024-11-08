@@ -9,15 +9,18 @@ import {
   ScrollView 
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
+import { useNavigation } from '@react-navigation/native'; // Import navigation
 
 
 export default function MyProfileScreen() {
+  const navigation = useNavigation(); // Initialize navigation
   const menuItems = [
     { 
       id: '1', 
       icon: 'document-text-outline', 
       title: 'Documents',
       badge: 'Pending',
+      screen: 'DocumentScreen' 
     },
     { 
       id: '2', 
@@ -53,7 +56,12 @@ export default function MyProfileScreen() {
   ];
 
   const MenuItem = ({ item }) => (
-    <TouchableOpacity style={styles.menuItem}>
+    <TouchableOpacity style={styles.menuItem}
+    onPress={() => {
+      if (item.screen) {
+        navigation.navigate(item.screen); // Navigate to specified screen
+      }
+    }}>
       <View style={styles.menuItemLeft}>
         <Ionicons 
           name={item.icon} 
