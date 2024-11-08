@@ -7,15 +7,15 @@ import {
   StyleSheet, 
   SafeAreaView,
   KeyboardAvoidingView,
-  Platform 
+  Platform,
+  ScrollView  // Import ScrollView from react-native
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
-import { ScrollView } from 'react-native-web';
 
 
 export default function CreateAccountDoctor() {
-  const navigation = useNavigation();  // Use navigation hook
+  const navigation = useNavigation();
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
@@ -37,10 +37,10 @@ export default function CreateAccountDoctor() {
           <Text style={styles.pageIndicator}>1/2</Text>
         </View>
 
-        <View style={styles.content}>
+        <ScrollView contentContainerStyle={styles.scrollContent}>
           <Text style={styles.title}>Create Account</Text>
           <Text style={styles.subtitle}>
-            Create an account so you can explore all pharmacies, devices and doctors.
+            Create an account so you can explore all pharmacies, devices, and doctors.
           </Text>
 
           <View style={styles.form}>
@@ -130,30 +130,25 @@ export default function CreateAccountDoctor() {
             </View>
           </View>
 
-          {/* <TouchableOpacity style={styles.nextButton}>
+          <TouchableOpacity 
+            style={styles.nextButton} 
+            onPress={() => navigation.navigate('CreateAccountStep2Screen')}
+          >
             <Text style={styles.nextButtonText}>Next</Text>
           </TouchableOpacity>
 
-          <View style={styles.signInContainer}>
+          <TouchableOpacity style={styles.signInContainer}>
             <Text style={styles.signInText}>
-              Already have an account. </Text>
-            <TouchableOpacity>
-              <Text style={styles.signInLink}>Sign in</Text>
-            </TouchableOpacity>
-          </View> */}
-           <TouchableOpacity 
-  style={styles.nextButton} 
-  onPress={() => navigation.navigate('CreateAccountStep2Screen')}
->
-  <Text style={styles.nextButtonText}>Next</Text>
-</TouchableOpacity>
-      
-      <TouchableOpacity style={styles.signInContainer}>
-        <Text style={styles.signInText}>
-          Already have an account? <Text style={styles.signInLink} onPress={() => navigation.navigate('LoginScreen')}>Sign in</Text>
-        </Text>
-      </TouchableOpacity>
-        </View>
+              Already have an account? 
+              <Text 
+                style={styles.signInLink} 
+                onPress={() => navigation.navigate('LoginScreen')}
+              > 
+                Sign in
+              </Text>
+            </Text>
+          </TouchableOpacity>
+        </ScrollView>
       </KeyboardAvoidingView>
     </SafeAreaView>
   );
@@ -176,9 +171,9 @@ const styles = StyleSheet.create({
     fontSize: 16,
     color: '#1F2937',
   },
-  content: {
-    flex: 1,
+  scrollContent: {
     padding: 20,
+    paddingBottom: 40, // Extra space for scrolling ease
   },
   title: {
     fontSize: 24,
