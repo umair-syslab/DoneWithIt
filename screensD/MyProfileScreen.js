@@ -103,7 +103,7 @@ export default function MyProfileScreen() {
             </View>
           </View>
           <TouchableOpacity style={styles.editButton}>
-            <Ionicons name="pencil" size={20} color="#0EA5E9" />
+            <Ionicons name="pencil" size={20} color="#000000" />
           </TouchableOpacity>
         </View>
 

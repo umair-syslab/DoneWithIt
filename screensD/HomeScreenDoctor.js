@@ -147,7 +147,7 @@ export default function HomeScreenDoctor() {
               </TouchableOpacity>
             </View>
             <Image
-              source={{ uri: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/oximeter-Rl9Ue6Ygj3k5F8RwvMPNV8euLebwxP.png' }}
+              source={{ uri: 'https://s3-alpha-sig.figma.com/img/f6ee/fb37/6a38b7a46452b2fa456380c152c63d6d?Expires=1731888000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=ocK2B8JwYcZcQtu60DscO8QMykEK6R6OwfIG4akj~JPYAweKlB6JLkdPfNL2pR9MJcT9AlKwH~dVFcoAnfiY8dQ1aLc0giPu4vE1gcXonCUUN0VsZ6qIwE6BoZAPOETH63r8l60CYV4i66ULOq0xt4WbiLPAQN1LPJcmgCj9~22qqjR~yefh1RjDQ37aZzAlqUIjqDCnsKqqzPvnxKQ6UINovp9zNHWvtEJVVtFanKCYWdE8lezk~g7A1QoGYanfIcYrz-97GhA2r1kbIF1wDqPE0P8qFePnKIa9KsNGOmrPLFsz43FBW7fHaXv6CkI0hpOVNhq6nYOEayvea~a66Q__' }}
               style={styles.deviceImage}
             />
           </LinearGradient>
