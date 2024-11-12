@@ -3,7 +3,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import FrontScreen from './FrontScreen';
 import RegisterScreen from './RegisterScreen';
-
+import FlexPractice from './screensD/FlexPractice';
 
 
 // Screens pa
@@ -41,13 +41,14 @@ import DocumentScreen from './screensD/DocumentScreen';
 import CreateAccountDoctor from './screensD/CreateAccountDoctor';
 import CreateAccountStep2Screen from './screensD/CreateAccountStep2Screen';
 import HomeScreenDoctor from './screensD/HomeScreenDoctor';
+import EditProfileScreen from './screensD/edit-profile-screen';
 
 const Stack = createStackNavigator();
 
 const App = () => {
    return (
       <NavigationContainer>
-         <Stack.Navigator initialRouteName="CreateAccountDoctor">
+         <Stack.Navigator initialRouteName="LoginScreen">
          <Stack.Screen
                name="CheckoutScreen"
                component={CheckoutScreen}
@@ -186,6 +187,16 @@ const App = () => {
                     <Stack.Screen
                name="ProfileNotVerifiedModal"
                component={ProfileNotVerifiedModal}
+               options={{ headerShown: false }}
+            />
+                   <Stack.Screen
+               name="FlexPractice"
+               component={FlexPractice}
+               options={{ headerShown: false }}
+            />
+                      <Stack.Screen
+               name="EditProfileScreen"
+               component={EditProfileScreen}
                options={{ headerShown: false }}
             />
          </Stack.Navigator>
