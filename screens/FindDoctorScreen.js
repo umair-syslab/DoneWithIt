@@ -10,8 +10,6 @@ import {
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 
-
-
 export default function FindDoctorScreen() {
   const [selectedSymptoms, setSelectedSymptoms] = useState([
     'Cough',
@@ -20,8 +18,9 @@ export default function FindDoctorScreen() {
     'Pain(not specified)'
   ]);
   const [searchText, setSearchText] = useState('');
+  const [symptomText, setSymptomText] = useState('');
 
-  const symptoms= [
+  const symptoms = [
     { id: '1', name: 'Abdominal or stomach pain' },
     { id: '2', name: 'Bleeding' },
     { id: '3', name: 'Cough' },
@@ -36,7 +35,7 @@ export default function FindDoctorScreen() {
     { id: '12', name: 'Sleep disorder' },
   ];
 
-  const categories= [
+  const categories = [
     { id: '1', name: 'General Practitioners' },
     { id: '2', name: 'Pediatricians' },
     { id: '3', name: 'Gynecologists' },
@@ -50,6 +49,13 @@ export default function FindDoctorScreen() {
       setSelectedSymptoms(selectedSymptoms.filter(s => s !== symptomName));
     } else {
       setSelectedSymptoms([...selectedSymptoms, symptomName]);
+    }
+  };
+
+  const addSymptom = () => {
+    if (symptomText && !selectedSymptoms.includes(symptomText)) {
+      setSelectedSymptoms([...selectedSymptoms, symptomText]);
+      setSymptomText(''); // Clear the input field after adding
     }
   };
 
@@ -77,11 +83,18 @@ export default function FindDoctorScreen() {
 
         <View style={styles.section}>
           <Text style={styles.sectionTitle}>Add Symptoms</Text>
-          <TextInput
-            style={styles.symptomInput}
-            placeholder="Type your symptom here..."
-            placeholderTextColor="#6B7280"
-          />
+          <View style={styles.inputWithButton}>
+            <TextInput
+              style={styles.symptomInput}
+              placeholder="Type your symptom here..."
+              placeholderTextColor="#6B7280"
+              value={symptomText}
+              onChangeText={setSymptomText}
+            />
+            <TouchableOpacity style={styles.addButton} onPress={addSymptom}>
+              <Ionicons name="add" size={20} color="#FFFFFF" />
+            </TouchableOpacity>
+          </View>
 
           <View style={styles.symptomsContainer}>
             {symptoms.map(symptom => (
@@ -145,10 +158,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     padding: 20,
     borderBottomWidth: 1,
-    borderBottomColor: '#E5E7EB',
+    borderBottomColor: '#ffffff',
+    marginTop: 20,
   },
   headerTitle: {
-    fontSize: 15,
+    fontSize: 14,
     fontWeight: 'bold',
     marginLeft: 120,
   },
@@ -181,12 +195,24 @@ const styles = StyleSheet.create({
     marginBottom: 12,
     color: '#1F2937',
   },
+  inputWithButton: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
   symptomInput: {
+    flex: 1,
     backgroundColor: '#F3F4F6',
     borderRadius: 8,
     padding: 12,
     fontSize: 16,
     marginBottom: 12,
+  },
+  addButton: {
+    backgroundColor: '#4A90E2',
+    padding: 12,
+    borderRadius: 12,
+    marginLeft: 8,
+    marginBottom:12
   },
   symptomsContainer: {
     flexDirection: 'row',
@@ -196,7 +222,7 @@ const styles = StyleSheet.create({
   },
   symptomTag: {
     backgroundColor: '#fff',
-    borderRadius: 20,
+    borderRadius: 12,
     paddingVertical: 8,
     paddingHorizontal: 16,
     borderWidth: 1,
@@ -238,7 +264,7 @@ const styles = StyleSheet.create({
   },
   categoryTag: {
     backgroundColor: '#fff',
-    borderRadius: 20,
+    borderRadius: 12,
     paddingVertical: 8,
     paddingHorizontal: 16,
     borderWidth: 1,

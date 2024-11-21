@@ -25,7 +25,14 @@ import ProductDetailScreen from './screens/ProductDetailScreen';
 import AddNewMemberScreen from './screens/AddNewMemberScreen'
 import AppointmentsScreen from './screens/AppointmentScreen';
 import AboutScreen from './screens/AboutScreen';
-
+import AppointmentRequestScreen from './screens/AppointmentRequestScreen';
+import SelectVisitAddressScreen from './screens/SelectVisitAddressScreen';
+import SelectDateTimeScreen from './screens/SelectDateTimeScreen';
+import AddNewAddressScreen from './screens/AddNewAddressScreen';
+import MyProfileScreenclient from './screens/MyProfileScreenclient';
+import SettingsScreen from './screens/SettingsScreen';
+import RequestedAppointmentsScreen from './screens/RequestedAppointmentsScreen';
+import DoctorProfileScreen from './screens/DoctorProfileScreen'; 
 
 // Models
 import MedicineReminderModal from './Modals/MedicineReminderModal';
@@ -42,13 +49,18 @@ import CreateAccountDoctor from './screensD/CreateAccountDoctor';
 import CreateAccountStep2Screen from './screensD/CreateAccountStep2Screen';
 import HomeScreenDoctor from './screensD/HomeScreenDoctor';
 import EditProfileScreen from './screensD/edit-profile-screen';
+import SelectFamilyMember from './screens/SelectFamilyMember';
+import AppointmentsScreen2 from './screensD/AppointmentsScreen2'
+import PatientsScreen from './screensD/PatientsScreen';
+import CurrentAppointmentsScreen from './screensD/CurrentAppointmentsPatientScreen';
+import PatientDetailScreen from './screensD/PatientDetailScreen';
 
 const Stack = createStackNavigator();
 
 const App = () => {
    return (
       <NavigationContainer>
-         <Stack.Navigator initialRouteName="LoginScreen">
+         <Stack.Navigator initialRouteName="CurrentAppointmentsScreen">
          <Stack.Screen
                name="CheckoutScreen"
                component={CheckoutScreen}
@@ -199,7 +211,80 @@ const App = () => {
                component={EditProfileScreen}
                options={{ headerShown: false }}
             />
+                  <Stack.Screen
+               name="AppointmentRequestScreen"
+               component={AppointmentRequestScreen}
+               options={{ headerShown: false }}
+            />
+                  <Stack.Screen
+               name="SelectVisitAddressScreen"
+               component={SelectVisitAddressScreen}
+               options={{ headerShown: false }}
+            />
+                 <Stack.Screen
+               name="SelectDateTimeScreen"
+               component={SelectDateTimeScreen}
+               options={{ headerShown: false }}
+            />
+      
+      <Stack.Screen
+               name="AddNewAddressScreen"
+               component={AddNewAddressScreen}
+               options={{ headerShown: false }}
+            />
+           
+              <Stack.Screen
+               name="MyProfileScreenclient"
+               component={MyProfileScreenclient}
+               options={{ headerShown: false }}
+            />
+               <Stack.Screen
+               name="SettingsScreen"
+               component={SettingsScreen}
+               options={{ headerShown: false }}
+            />
+                <Stack.Screen
+               name="SelectFamilyMember"
+               component={SelectFamilyMember}
+               options={{ headerShown: false }}
+            />
+                 <Stack.Screen
+               name="AppointmentsScreen2"
+               component={AppointmentsScreen2}
+               options={{ headerShown: false }}
+            />
+                  <Stack.Screen
+               name="PatientsScreen"
+               component={PatientsScreen}
+               options={{ headerShown: false }}
+            />
+                  <Stack.Screen
+               name="CurrentAppointmentsScreen"
+               component={CurrentAppointmentsScreen}
+               options={{ headerShown: false }}
+            />
+                  <Stack.Screen
+               name="PatientDetailScreen"
+               component={PatientDetailScreen}
+               options={{ headerShown: false }}
+            />
+
+<Stack.Screen
+               name="RequestedAppointmentsScreen"
+               component={RequestedAppointmentsScreen}
+               options={{ headerShown: false }}
+            />
+            <Stack.Screen
+               name="DoctorProfileScreen"
+               component={DoctorProfileScreen}
+               options={{ headerShown: false }}
+            />
+
+
+
          </Stack.Navigator>
+
+         
       </NavigationContainer>
    );
 };

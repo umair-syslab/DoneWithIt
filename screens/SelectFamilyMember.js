@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 
-export default function SelectProfileScreen() {
+export default function SelectFamilyMember() {
   const [selectedProfile, setSelectedProfile] = useState('1');
 
   const profiles = [
@@ -69,7 +69,7 @@ export default function SelectProfileScreen() {
         <TouchableOpacity>
           <Ionicons name="arrow-back" size={24} color="#000" />
         </TouchableOpacity>
-        <Text style={styles.headerTitle}>Select Profile</Text>
+        <Text style={styles.headerTitle}>Select Family Member</Text>
       </View>
 
       <View style={styles.content}>
@@ -86,7 +86,7 @@ export default function SelectProfileScreen() {
         </TouchableOpacity>
       </View>
 
-      <View style={styles.bottomNav}>
+      {/* <View style={styles.bottomNav}>
         <TouchableOpacity style={styles.navItem}>
           <Ionicons name="home-outline" size={24} color="#6B7280" />
           <Text style={styles.navText}>Home</Text>
@@ -103,7 +103,7 @@ export default function SelectProfileScreen() {
           <Ionicons name="person" size={24} color="#0EA5E9" />
           <Text style={[styles.navText, styles.navTextActive]}>Profile</Text>
         </TouchableOpacity>
-      </View>
+      </View> */}
     </SafeAreaView>
   );
 }
